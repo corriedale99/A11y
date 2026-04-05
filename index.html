@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A11yチェッカープロジェクト | デザイナーのための優しい参考書</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            background-color: #FFF9F0; /* 温かいアイボリー */
+            color: #5D4037; /* 柔らかいブラウン */
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, #FFF9F0 0%, #FFEED9 100%);
+        }
+        .card {
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(255, 159, 103, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .accent-orange { color: #FF9F67; }
+        .bg-accent-orange { background-color: #FF9F67; }
+        .accent-blue { color: #A5D7E8; }
+        .bg-accent-blue { background-color: #A5D7E8; }
+        h1, h2 { font-family: 'Kiwi Maru', serif; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient pt-16 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block px-4 py-1 rounded-full bg-white text-orange-400 font-bold text-sm mb-4 shadow-sm">
+                みんなに優しいWeb体験を！
+            </span>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                デザイナーのための<br>
+                <span class="accent-orange">「AIアクセシビリティチェッカー」</span>
+            </h1>
+            <p class="text-lg mb-8 opacity-90">
+                あなたのデザインをより良くするための『優しいアドバイザー』。
+            </p>
+            <div class="flex justify-center gap-4">
+<!--
+                <a href="#features" class="bg-accent-orange text-white px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition">
+                    詳しく知る
+                </a>
+-->
+            </div>
+        </div>
+    </header>
+
+    <!-- Concept Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="text-3xl mr-2">✨</span> 「社会モデル」に基づいた助言
+                </h2>
+                <p class="leading-relaxed mb-6">
+                    障害を個人の問題ではなく「サイト側の障壁」と捉え、専門用語を控えた前向きな言葉で改善を支援します。
+                    否定的なエラー表示で責めるのではなく、より良い表現を共に見つけるためのパートナーです。
+                </p>
+                <div class="p-4 bg-orange-50 rounded-2xl border-l-4 border-orange-300 text-sm">
+                    「バリアフリーなWebサイトのデザインって難しい！」<br>
+                    私たちはデザイナーさんのそんな声に寄り添いたいのです。
+                </div>
+            </div>
+            <div class="card p-8 text-center">
+                <!-- キツネのイラストを表示 -->
+                <img src="img/fox-illust.png" alt="虫眼鏡でWebサイトを優しくチェックするキツネのイラスト" class="mx-auto h-48 w-auto mb-4">
+                <p class="font-bold">プライバシーを守る「情報の使い捨て」設計</p>
+                <p class="text-sm opacity-70 mt-2">データはメモリ内で処理され、即座に破棄。<br>
+                AIの学習にも利用されません。</p>
+            </div>
+        </div>
+    </section>
+<!-- Features Detail Section -->
+    <section class="py-16 px-6 bg-[#FFF4E6]"> <!-- 少し濃いめのアイボリーで区切り -->
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl font-bold mb-4 text-center">3つのアプローチで、多角的に診断</h2>
+            <p class="text-center mb-12 opacity-80 text-sm md:text-base">
+                世界基準の機械チェックと、最新AIによる「目」と「脳」を組み合わせた独自の診断アルゴリズム。
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- 1. 機械診断 -->
+                <div class="card p-6 border-t-4 border-blue-300">
+                    <div class="text-3xl mb-4">⚙️</div>
+                    <h3 class="font-bold text-lg mb-2">機械的な診断</h3>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        世界的に信頼されている検査エンジン<strong>「axe-core」</strong>を採用。WCAG 2.0/2.2やJIS X 8341-3に基づき、コード上の不備を正確に特定します。
+                    </p>
+                </div>
+
+                <!-- 2. フォト診断 -->
+                <div class="card p-6 border-t-4 border-orange-300">
+                    <div class="text-3xl mb-4">📷</div>
+                    <h3 class="font-bold text-lg mb-2">AIによる「目視」</h3>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        AIがブラウザ上の表示を実際に<strong>「フォト診断」</strong>。人間と同じように画面を眺めることで、コードだけでは判別しにくい視覚的な使いやすさを評価します。
+                    </p>
+                </div>
+
+                <!-- 3. 画像診断 -->
+                <div class="card p-6 border-t-4 border-green-300">
+                    <div class="text-3xl mb-4">🧠</div>
+                    <h3 class="font-bold text-lg mb-2">AIの意味理解</h3>
+                    <p class="text-sm leading-relaxed opacity-90">
+                        生成AI<strong>「Gemini」</strong>が画像の内容を深く理解。文脈に合わせた最適な「代替テキスト（alt属性）」の改善案を、あなたの代わりに考えます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Screenshot Section (修正版) -->
+    <section class="py-16 bg-white px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-12">実際の診断レポート</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="img/step1.png" alt="機械診断レポート" class="w-full h-auto">
+                    </div>
+                    <p class="font-bold text-sm">優先順位がわかる機械診断</p>
+                    <p class="text-xs opacity-70">修正コードの例もセットで提示</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="img/step2.png" alt="フォト診断レポート" class="w-full h-auto">
+                    </div>
+                    <p class="font-bold text-sm">AIによる視覚的な評価</p>
+                    <p class="text-xs opacity-70">デザインの意図を汲み取った分析</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
+                        <img src="img/step3.png" alt="画像診断レポート" class="w-full h-auto">
+                    </div>
+                    <p class="font-bold text-sm">心強いaltテキスト提案</p>
+                    <p class="text-xs opacity-70">複数の選択肢から最適なものを選べる</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="features" class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold mb-12 text-center">既存ツールとの違い</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <thead>
+                        <tr class="bg-accent-blue text-white">
+                            <th class="p-4">比較項目</th>
+                            <th class="p-4">一般的なツール</th>
+                            <th class="p-4 bg-orange-400">本サービス</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-50">
+                            <td class="p-4 font-bold">手軽さ</td>
+                            <td class="p-4 text-sm">インストールが必要</td>
+                            <td class="p-4 text-sm font-bold">URL入力のみ</td>
+                        </tr>
+                        <tr class="border-b border-gray-50">
+                            <td class="p-4 font-bold">日本語理解</td>
+                            <td class="p-4 text-sm">機械的なチェックのみ</td>
+                            <td class="p-4 text-sm font-bold">AIが文脈を解釈</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">修正案の提示</td>
+                            <td class="p-4 text-sm">技術的な説明のみ</td>
+                            <td class="p-4 text-sm font-bold">具体的で親切な案</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact & QR Section -->
+    <section class="py-16 px-6 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-2 text-[#5D4037]">このサイトをシェア・保存する</h2>
+            <p class="text-sm opacity-60 mb-10">QRコードを読み取ると、このページにアクセスできます</p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+                <!-- QRコード画像：正方形を強制維持 -->
+                <div class="bg-white p-6 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] rounded-[2rem] border border-gray-50 flex-shrink-0">
+                    <img src="img/qr-code.png" alt="QRコード" class="w-48 h-48 object-contain aspect-square">
+                </div>
+                
+                <!-- URLとメッセージ：スクショのデザインを再現 -->
+                <div class="text-left">
+                    <p class="text-xs font-bold text-[#FF9F67] mb-2 uppercase tracking-widest">Website URL</p>
+                    <div class="bg-[#FFF5EB] px-6 py-4 rounded-2xl mb-6 inline-block">
+                        <p class="text-xl font-mono text-[#5D4037] border-b-2 border-[#5D4037] border-opacity-20 pb-1">
+                        <a href="https://checker.bringyouralibis.com/">https://checker.bringyouralibis.com/</a>
+                    </p>
+                    </div>
+                    <p class="text-[#5D4037] leading-relaxed">
+                        現在無料で公開しています。<br>
+                        どうぞお試しください。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center border-t border-orange-100">
+        <p class="text-sm opacity-60 mb-4">© 2026 A11yチェッカープロジェクト</p>
+        <div class="flex justify-center gap-6">
+            <!-- 名刺代わりのSNSリンクなど -->
+            <span class="text-2xl">🦊</span>
+        </div>
+    </footer>
+
+</body>
+</html>
