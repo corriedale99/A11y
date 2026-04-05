@@ -201,27 +201,28 @@
             
             <!-- URLとメッセージ：スマホでの折り返しとサイズ調整 -->
             <div class="text-center md:text-left w-full max-w-full px-2">
-                <p class="text-xs font-bold text-[#FF9F67] mb-2 uppercase tracking-widest">Website URL</p>
-                <div class="bg-[#FFF5EB] px-4 py-3 md:px-6 md:py-4 rounded-2xl mb-4 inline-block max-w-full">
-                    <!-- text-sm (スマホ) / md:text-xl (PC) に変更し、break-allを追加 -->
-                    <p class="text-sm md:text-xl font-mono text-[#5D4037] border-b-2 border-[#5D4037] border-opacity-20 pb-1 break-all">
-                        <a href="https://checker.bringyouralibis.com/">https://checker.bringyouralibis.com/</a>
-                    </p>
-                </div>
 
-                <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
-                    <div>
-                        <p class="text-xs font-bold text-[#FF9F67] mb-1 uppercase tracking-widest">紹介スライド</p>
-                        <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl inline-block">
-                            <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20">
+            <!-- URL表示部分：折り返さず、はみ出さず、箱の中だけスクロール可能にする -->
+            <div class="bg-[#FFF5EB] px-4 py-3 md:px-6 md:py-4 rounded-2xl mb-4 w-full max-w-full overflow-x-auto custom-scrollbar">
+                <p class="text-[15px] md:text-xl font-mono text-[#5D4037] border-b-2 border-[#5D4037] border-opacity-20 pb-1 whitespace-nowrap inline-block min-w-full">
+                    <a href="https://checker.bringyouralibis.com/">https://checker.bringyouralibis.com/</a>
+                </p>
+            </div>
+
+                <!-- スライドリンク部分も同様に1行でスクロール可能に -->
+                <div class="flex flex-nowrap justify-start md:justify-start gap-2 mb-6 overflow-x-auto pb-2 custom-scrollbar">
+                    <div class="flex-shrink-0">
+                        <p class="text-[10px] font-bold text-[#FF9F67] mb-1 uppercase tracking-widest">紹介スライド</p>
+                        <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl">
+                            <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20 whitespace-nowrap">
                                 <a href="https://x.gd/Zcdkq">さらっと版</a>
                             </p>
                         </div>
                     </div>
-                    <div>
-                        <p class="text-xs font-bold text-[#FF9F67] mb-1 uppercase tracking-widest text-transparent md:text-inherit">.</p>
-                        <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl inline-block">
-                            <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20">
+                    <div class="flex-shrink-0">
+                        <p class="text-[10px] font-bold text-transparent mb-1 uppercase tracking-widest md:block hidden">.</p>
+                        <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl">
+                            <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20 whitespace-nowrap">
                                 <a href="https://x.gd/w1Pup">じっくり版</a>
                             </p>
                         </div>
