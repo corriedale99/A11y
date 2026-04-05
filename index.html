@@ -31,6 +31,15 @@
         .accent-blue { color: #A5D7E8; }
         .bg-accent-blue { background-color: #A5D7E8; }
         h1, h2 { font-family: 'Kiwi Maru', serif; }
+        
+        /* 横スクロールバーを隠す（操作は可能） */
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body>
@@ -188,31 +197,32 @@
     </section>
 
 <!-- Contact & QR Section -->
-<section class="py-16 px-4 bg-white overflow-hidden"> <!-- pxを少し詰め、はみ出しを制御 -->
+<section class="py-16 px-4 bg-white overflow-hidden">
     <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-2xl font-bold mb-2 text-[#5D4037]">こちらへどうぞ</h2>
         <p class="text-sm opacity-60 mb-10 px-4">QRコードを読み取ると、A11yチェッカーにアクセスできます</p>
         
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <!-- QRコード画像：サイズをスマホ向けに微調整 -->
+            <!-- QRコード画像：影を復活させ、正方形を維持 -->
             <div class="bg-white p-4 md:p-6 shadow-[0_10px_40px_-10px_rgba(0,0,0,0)] rounded-[2rem] border border-gray-50 flex-shrink-0">
                 <img src="img/qr-code.png" alt="QRコード" class="w-40 h-40 md:w-48 md:h-48 object-contain aspect-square">
             </div>
             
-            <!-- URLとメッセージ：スマホでの折り返しとサイズ調整 -->
-            <div class="text-center md:text-left w-full max-w-full px-2">
+            <!-- テキストエリア：幅が突き抜けないように制御 -->
+            <div class="text-center md:text-left w-full max-w-full overflow-hidden px-2">
+                
+                <!-- URLラベルとスクロール可能なURLボックス -->
+                <p class="text-xs font-bold text-[#FF9F67] mb-2 uppercase tracking-widest">Website URL</p>
+                <div class="bg-[#FFF5EB] px-4 py-3 md:px-6 md:py-4 rounded-2xl mb-6 w-full overflow-x-auto custom-scrollbar">
+                    <p class="text-[15px] md:text-xl font-mono text-[#5D4037] border-b-2 border-[#5D4037] border-opacity-20 pb-1 whitespace-nowrap inline-block">
+                        <a href="https://checker.bringyouralibis.com/">https://checker.bringyouralibis.com/</a>
+                    </p>
+                </div>
 
-            <!-- URL表示部分：折り返さず、はみ出さず、箱の中だけスクロール可能にする -->
-            <div class="bg-[#FFF5EB] px-4 py-3 md:px-6 md:py-4 rounded-2xl mb-4 w-full max-w-full overflow-x-auto custom-scrollbar">
-                <p class="text-[15px] md:text-xl font-mono text-[#5D4037] border-b-2 border-[#5D4037] border-opacity-20 pb-1 whitespace-nowrap inline-block min-w-full">
-                    <a href="https://checker.bringyouralibis.com/">https://checker.bringyouralibis.com/</a>
-                </p>
-            </div>
-
-                <!-- スライドリンク部分も同様に1行でスクロール可能に -->
-                <div class="flex flex-nowrap justify-start md:justify-start gap-2 mb-6 overflow-x-auto pb-2 custom-scrollbar">
+                <!-- スライドリンク：スマホでも横一列に並べてスクロール可能に -->
+                <div class="flex flex-nowrap justify-start md:justify-start gap-3 mb-6 overflow-x-auto pb-2 custom-scrollbar">
                     <div class="flex-shrink-0">
-                        <p class="text-[10px] font-bold text-[#FF9F67] mb-1 uppercase tracking-widest">紹介スライド</p>
+                        <p class="text-[10px] font-bold text-[#FF9F67] mb-1 uppercase tracking-widest text-left">紹介スライド</p>
                         <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl">
                             <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20 whitespace-nowrap">
                                 <a href="https://x.gd/Zcdkq">さらっと版</a>
@@ -220,7 +230,7 @@
                         </div>
                     </div>
                     <div class="flex-shrink-0">
-                        <p class="text-[10px] font-bold text-transparent mb-1 uppercase tracking-widest md:block hidden">.</p>
+                        <p class="text-[10px] font-bold text-transparent mb-1 uppercase tracking-widest text-left md:block hidden">.</p>
                         <div class="bg-[#FFF5EB] px-4 py-2 rounded-xl">
                             <p class="text-sm md:text-base font-mono text-[#5D4037] border-b border-[#5D4037] border-opacity-20 whitespace-nowrap">
                                 <a href="https://x.gd/w1Pup">じっくり版</a>
