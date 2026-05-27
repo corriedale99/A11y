@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -30,7 +30,7 @@
         .bg-accent-orange { background-color: #FF9F67; }
         .accent-blue { color: #A5D7E8; }
         .bg-accent-blue { background-color: #A5D7E8; }
-        h1, h2 { font-family: 'Kiwi Maru', serif; }
+        h1, h2 { font-family: 'M PLUS Rounded 1c', sans-serif; }
         
         /* 横スクロールバーを隠す（操作は可能） */
         .custom-scrollbar::-webkit-scrollbar {
@@ -47,15 +47,16 @@
     <!-- Hero Section -->
     <header class="hero-gradient pt-16 pb-12 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <span class="inline-block px-4 py-1 rounded-full bg-white text-orange-400 font-bold text-sm mb-4 shadow-sm">
+            <span class="inline-block px-4 py-1 rounded-full bg-white text-orange-400 font-bold text-[15px] mb-4 shadow-sm">
                 みんなに優しいWeb体験を！
             </span>
-            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-[1.34]">
                 デザイナーのための<br>
                 <span class="accent-orange">「AIアクセシビリティチェッカー」</span>
             </h1>
-            <p class="text-lg mb-8 opacity-90">
-                あなたのデザインをより良くするための『優しいアドバイザー』。
+            <p class="text-lg mb-8 opacity-90 leading-relaxed">
+                URLを入れるだけで、Webページの読みにくさ・使いにくさをAIがやさしく指摘します。<br>
+                DOM診断、画像alt診断、AIによる見た目の確認をまとめて行い、改善案つきのレポートを表示します。
             </p>
             <div class="flex justify-center gap-4">
 <!--
@@ -135,28 +136,14 @@
     <section class="py-16 bg-white px-6">
         <div class="max-w-5xl mx-auto text-center">
             <h2 class="text-2xl font-bold mb-12">実際の診断レポート</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="space-y-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
-                        <img src="img/step1.png" alt="機械診断レポート" class="w-full h-auto">
-                    </div>
-                    <p class="font-bold text-sm">優先順位がわかる機械診断</p>
-                    <p class="text-xs opacity-70">修正コードの例もセットで提示</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
-                        <img src="img/step2.png" alt="フォト診断レポート" class="w-full h-auto">
-                    </div>
-                    <p class="font-bold text-sm">AIによる視覚的な評価</p>
-                    <p class="text-xs opacity-70">デザインの意図を汲み取った分析</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-gray-100">
-                        <img src="img/step3.png" alt="画像診断レポート" class="w-full h-auto">
-                    </div>
-                    <p class="font-bold text-sm">心強いaltテキスト提案</p>
-                    <p class="text-xs opacity-70">複数の選択肢から最適なものを選べる</p>
-                </div>
+            <div class="card p-8 bg-[#FFF9F0]">
+                <p class="text-sm md:text-base leading-relaxed opacity-80 mb-6">
+                    自作サイトを診断したサンプルレポートです。<br>
+                    どのような指摘や改善案が出るかを、試す前に確認できます。
+                </p>
+                <a href="sample.html" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent-orange text-white px-8 py-3 rounded-full font-bold shadow-lg hover:opacity-90 transition">
+                    見本レポートを別タブで開く
+                </a>
             </div>
         </div>
     </section>
@@ -196,10 +183,26 @@
         </div>
     </section>
 
+    <!-- Developer Section -->
+    <section class="py-16 px-6 bg-[#FFF4E6]">
+        <div class="max-w-4xl mx-auto">
+            <div class="card p-8 md:p-10">
+                <h2 class="text-2xl font-bold mb-6 text-center">開発者について</h2>
+                <p class="leading-relaxed mb-4">
+                    ディスレクシア当事者として、Webの読みにくさ・使いにくさに関心を持っています。<br>
+                    このチェッカーは、専門家だけでなく、Web制作者や広報担当者が「最初の気づき」を得られるようにという思いで、AIと一緒に開発している個人プロジェクトです。
+                </p>
+                <p class="leading-relaxed">
+                    Webの問題点を責めるためではなく、より伝わりやすい形に近づけるための道具を目指しています。
+                </p>
+            </div>
+        </div>
+    </section>
+
 <!-- Contact & QR Section -->
 <section class="py-16 px-4 bg-white overflow-hidden">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-2xl font-bold mb-2 text-[#5D4037]">こちらからどうぞ</h2>
+        <h2 class="text-2xl font-bold mb-2 text-[#5D4037]">お試しください</h2>
         <p class="text-sm opacity-60 mb-10 px-4">QRコードを読み取ると、A11yチェッカーにアクセスできます</p>
         
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
@@ -240,9 +243,23 @@
                 </div>
 
                 <p class="text-[#5D4037] text-sm md:text-base leading-relaxed">
-                    現在無料で公開しています。<br>
-                    どうぞお試しください。
+                    現在は個人開発による無料実証実験として公開しています。<br>
+                    AI利用料の都合により、予告なく利用回数の制限・一時停止を行う場合があります。
                 </p>
+                <p class="text-[#5D4037] text-sm md:text-base leading-relaxed mt-6">
+                    感想・不具合報告は、Xのリプライでお知らせください。励みになります。<br>
+                    <a href="https://x.com/corriedale_w" class="text-[#FF9F67] font-bold underline">@corriedale_w</a>
+                </p>
+
+                <p class="text-[#5D4037] text-sm md:text-base leading-relaxed mt-4">
+                    開発の背景や制作記録は、noteにもまとめています。<br>
+                    <a href="https://note.com/melt_works/n/n8da44d3f2d58" class="text-[#FF9F67] font-bold underline">Webアクセシビリティ・チェッカーを作ってみました</a>
+                </p>
+
+                <p class="text-[#5D4037] text-sm md:text-base leading-relaxed mt-6">
+                    どうぞお気軽にお試しください。
+                </p>
+                <!-- 将来的にGoogleフォームのフィードバック導線をここに追加予定 -->
             </div>
         </div>
     </div>

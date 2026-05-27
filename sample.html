@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- 公開用サンプルとして匿名化済み -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>診断レポート</title>
+        <style>
+            body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif; line-height: 1.6; color: #334155; background: #f0f4f8; margin: 0; padding: 20px; }
+            .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.06); }
+            h1 { color: #003399; font-weight: 800; }
+            .summary-box { background: #f1f5f9; padding: 35px; border-radius: 15px; margin-bottom: 70px; border: 1px solid #cbd5e1; }
+            .return-btn { display: inline-block; background: #003399; color: white; padding: 18px 50px; text-decoration: none; border-radius: 60px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(0,51,153,0.3); }
+            .url-link { word-break: break-all !important; overflow-wrap: anywhere !important; display: inline-block !important; white-space: normal !important; max-width: 100%; color: #e11d48; text-decoration: underline; }
+            .visual-column { min-width: 0; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Webアクセシビリティ診断レポート</h1>
+            <div style="background:#fff7ed; border:1px solid #fed7aa; color:#7c2d12; padding:16px 20px; border-radius:12px; margin:20px 0 30px; font-size:0.95rem;">
+                このレポートは、自作サイトを実際に診断した結果をもとに、公開用にURLや団体名などを一部匿名化したサンプルです。<br>
+                指摘内容や改善案の流れを確認していただくための見本として掲載しています。
+            </div>
+            <div style="color: #64748b; font-size: 1rem; margin-bottom: 10px;">日時: 2026/05/26 17:34 | 対象: 自作サンプルサイト</div>
+            <div style="font-size: 0.9rem; color: #94a3b8; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px;">診断コスト: 公開用サンプルのため非表示</div>
+            <div class="summary-box"><h2 style="margin-top:0; color:#003399;">🧠 AI分析サマリー</h2><h3 style="color:#003399; margin-top:25px;">1. 全体へのメッセージ</h3>アクセシビリティ向上への前向きな取り組みに、心より敬意を表します。<br>診断の結果、サイト全体で「情報の伝わりやすさ」をさらに高めるための改善の余地が見つかりました。<br>これらは、特定のユーザーだけでなく、すべての訪問者にとってより快適なサイト体験につながる重要なステップです。<br><br><h3 style="color:#003399; margin-top:25px;">2. サイト全体に見られる主な課題の傾向</h3>・コントラスト不足による視認性の低下：文字やボタンの色が背景に溶け込んでしまい、視覚に不安のある方や屋外で閲覧する方が情報を読み取れない可能性があります。<br>・リンクの目的が不明瞭：リンク先に「何があるか」を示す説明が不足しており、画面読み上げソフトを利用する方がリンク先を正しく理解できない状態です。<br>・見出し構造の不整合：見出しの順序が論理的でないため、サイトの構成を把握するための道しるべが機能していません。<br>・画像情報の欠落：画像の内容を説明するテキスト（代替テキスト）が設定されていない、または不十分なため、画像から得られるはずの情報が一部の方に届いていません。<br><br><h3 style="color:#003399; margin-top:25px;">3. 未来へのステップ</h3>一つひとつの改善は、誰にとっても使いやすい「優しいWebサイト」への確かな前進です。<br>まずは修正しやすい箇所から着実に進めていきましょう。応援しております。<br></div>
+            
+        <div class="page-section" style="margin-bottom: 100px; padding-bottom: 50px; border-bottom: 1px solid #e2e8f0;">
+            <h2 class="page-title" style="border-bottom: 3px solid #1e293b; padding-bottom: 12px; margin-bottom: 30px; word-break: break-all; font-size: 1.3rem; color: #0f172a;">Page 1: <span>自作サンプルサイト</span></h2>
+            
+            <h3 style="color: #1e293b; margin-bottom: 25px;">⚙️ 機械診断 (優先度の高い5つの対応案)</h3>
+            
+                <div class="violation-card" style="margin-bottom: 40px;">
+                    <div class="v-header" style="color: #1e293b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">⚠️ 要素は色のコントラスト比（最低限）の閾値を満たしていなければなりません <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">（ページ内の計 1 箇所で検出）</span></div>
+                    <div class="v-desc" style="margin-bottom: 12px; color: #475569; font-size: 0.95rem;">前景色と背景色のコントラストがWCAG 2のAAコントラスト比（最低限）のしきい値を満たすことを確認してください</div>
+                    <div class="v-code">
+                        <pre style="background: #f1f5f9; color: #003399; padding: 18px; border-radius: 8px; white-space: pre-wrap; word-break: break-all; font-size: 0.9rem; margin:0; border: 1px solid #e2e8f0;"><code>&lt;span data-hook="freemium-button" class="zAqGm2 hN2NUY"&gt;今すぐはじめる&lt;/span&gt;</code></pre>
+                    </div>
+                    
+                    <div class="ai-skip-box" style="margin-top: 15px; background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <div style="color: #475569; font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">💡 AIアドバイス: WCAG 2.1の達成基準1.4.3に基づき、文字色と背景色のコントラスト比が最低でも4.5:1（大きな文字の場合は3:1）以上になるようCSSを調整してください。HTML構造の修正ではなく、CMSのスタイル設定画面やCSSファイルにて、視認性の高い配色へ変更することを推奨します。現在のクラス名や要素構造は維持したまま、色指定のみを改善してください。</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="violation-card" style="margin-bottom: 40px;">
+                    <div class="v-header" style="color: #1e293b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">⚠️ リンクには認識可能なテキストがなければなりません <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">（ページ内の計 2 箇所で検出）</span></div>
+                    <div class="v-desc" style="margin-bottom: 12px; color: #475569; font-size: 0.95rem;">リンクに認識可能なテキストが存在することを確認してください</div>
+                    <div class="v-code">
+                        <pre style="background: #f1f5f9; color: #003399; padding: 18px; border-radius: 8px; white-space: pre-wrap; word-break: break-all; font-size: 0.9rem; margin:0; border: 1px solid #e2e8f0;"><code>&lt;a data-testid="linkElement" href="https://example.com/sample-sns" target="_blank" class="twXk19"&gt;</code></pre>
+                    </div>
+                    
+                    <div class="ai-fix-box" style="margin-top: 15px; background: #eff6ff; padding: 20px; border-radius: 12px;">
+                        <div style="color: #475569; font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">💡 AIアドバイス: リンク内にテキストが存在しないため、aria-label属性を追加してリンクの目的を明示しました。スクリーンリーダー利用者がリンク先を正しく理解できるようにするためです。CMSのリンク設定画面で代替テキストやラベルを設定できる場合は、そちらを優先してください。今回はサンプルSNSページへのリンクと推測し、[サンプルSNSページ]というたたき台を提示しています。</div>
+                        <div style="font-weight: bold; color: #1e40af; margin-bottom: 12px; font-size: 0.9rem;">💡 AIによる修正案（参考）：</div>
+                        <pre style="background: transparent; padding: 0; border: none; font-size: 0.85rem; margin: 0; white-space: pre-wrap; word-break: break-all; color: #1e293b;"><code>&lt;a data-testid="linkElement" href="https://example.com/sample-sns" target="_blank" class="twXk19" aria-label="[サンプルSNSページ]"&gt;&lt;/a&gt;</code></pre>
+                        <div style="margin-top: 12px; color: #059669; font-weight: bold; font-size: 0.85rem;">✅ 検証済み：修正案によって課題は解消されました</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="violation-card" style="margin-bottom: 40px;">
+                    <div class="v-header" style="color: #1e293b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">⚠️ 見出しのレベルは1つずつ増加させなければなりません <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">（ページ内の計 2 箇所で検出）</span></div>
+                    <div class="v-desc" style="margin-bottom: 12px; color: #475569; font-size: 0.95rem;">見出しの順序が意味的に正しいことを確認してください</div>
+                    <div class="v-code">
+                        <pre style="background: #f1f5f9; color: #003399; padding: 18px; border-radius: 8px; white-space: pre-wrap; word-break: break-all; font-size: 0.9rem; margin:0; border: 1px solid #e2e8f0;"><code>&lt;h4 class="font_4 wixui-rich-text__text" style="line-height:1.1em; text-align:center; font-size:36px;"&gt;</code></pre>
+                    </div>
+                    
+                    <div class="ai-skip-box" style="margin-top: 15px; background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <div style="color: #475569; font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">💡 AIアドバイス: 見出しのレベルが一つずつ増加していないため、スクリーンリーダー利用者がコンテンツの構造を把握しにくくなります。h3の次にh4を使用せず、h3の次にh4を使用するなど、見出しレベルを適切に順序立ててください。CMSを利用している場合は、見出し構造の編集機能を確認してください。</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="violation-card" style="margin-bottom: 40px;">
+                    <div class="v-header" style="color: #1e293b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">⚠️ ページのすべてのコンテンツはlandmarkに含まれていなければなりません <span style="font-size: 0.85rem; color: #64748b; font-weight: normal; margin-left: 10px;">（ページ内の計 1 箇所で検出）</span></div>
+                    <div class="v-desc" style="margin-bottom: 12px; color: #475569; font-size: 0.95rem;">ページのすべてのコンテンツがlandmarkに含まれていることを確認してください</div>
+                    <div class="v-code">
+                        <pre style="background: #f1f5f9; color: #003399; padding: 18px; border-radius: 8px; white-space: pre-wrap; word-break: break-all; font-size: 0.9rem; margin:0; border: 1px solid #e2e8f0;"><code>&lt;div id="WIX_ADS" class="_Gifr2 uOsHYT BnSWEo"&gt;</code></pre>
+                    </div>
+                    
+                    <div class="ai-skip-box" style="margin-top: 15px; background: #f8fafc; padding: 15px; border-radius: 8px;">
+                        <div style="color: #475569; font-size: 0.85rem; line-height: 1.5; margin-bottom: 12px;">💡 AIアドバイス: ページのコンテンツがlandmarkに含まれていない場合、スクリーンリーダー利用者は特定のセクションへ直接移動することが困難になります。主要なコンテンツを適切なlandmark（例: &lt;main&gt;, &lt;nav&gt;, &lt;aside&gt;）で囲むか、ロール属性を付与してナビゲーションを支援してください。CMSを利用している場合は、レイアウト設定でランドマークの適用を確認してください。</div>
+                    </div>
+                    
+                </div>
+                
+            
+            
+            
+            <div class="visual-audit-box" style="margin-top: 50px; margin-bottom: 40px; background: #faf5ff; border: 1px solid #e9d5ff; padding: 25px; border-radius: 12px; overflow: hidden;">
+                <h3 style="color: #6b21a8; margin-top: 0; margin-bottom: 20px; font-size: 1.15rem; border-bottom: 2px solid #e9d5ff; padding-bottom: 10px;">📷 見た目とコードの統合診断 (AI目視)</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    
+            <div class="visual-column">
+                <div style="font-weight: bold; color: #6b21a8; margin-bottom: 10px; font-size: 0.9rem;">【PC版の診断】</div>
+                <div style="background:#f8fafc; border:1px dashed #cbd5e1; color:#64748b; padding:24px; border-radius:12px; text-align:center; font-size:0.95rem;">
+    画面キャプチャは、公開用サンプルでは匿名化のため非表示にしています。
+</div>
+                <div style="color: #4c1d95; font-size: 0.9rem; line-height: 1.6; white-space: pre-wrap;">[AIの視覚認識]
+ヘッダー部分のWIXロゴと「このウェブサイトはWixで作成されました。あなたも作成してみませんか？」というテキスト、および「今すぐはじめる」ボタンは、背景色とのコントラストが低い。メインコンテンツの「サンプル団体支援ネットワーク」というタイトルや、その下の「ひとりで悩んでいませんか？」という問いかけは、背景色とのコントラストが十分にあるように見える。
+
+[分析と評価]
+ヘッダー部分のテキストとボタンは、背景色とのコントラスト比がWCAG 2.1 AAの基準を満たしていない可能性があり、視覚に障害のあるユーザーにとって読みにくい可能性がある。特に「今すぐはじめる」ボタンは、背景とのコントラストが低く、クリック可能な要素であることが認識しにくいかもしれない。
+
+[改善アドバイス]
+ヘッダー部分のテキストと「今すぐはじめる」ボタンについて、背景色とのコントラスト比をWCAG 2.1 AAの基準（4.5:1以上）を満たすように、色を変更することを推奨します。例えば、テキストの色を濃くしたり、ボタンの背景色をより明るくしたりすることで、視認性を向上させることができます。</div>
+            </div>
+            
+                    
+                <div class="visual-column" style="border-left: 1px solid #e9d5ff; padding-left: 20px;">
+                    <div style="font-weight: bold; color: #6b21a8; margin-bottom: 10px; font-size: 0.9rem;">【スマホ版の診断】</div>
+                    <div style="background:#f8fafc; border:1px dashed #cbd5e1; color:#64748b; padding:24px; border-radius:12px; text-align:center; font-size:0.95rem;">
+    画面キャプチャは、公開用サンプルでは匿名化のため非表示にしています。
+</div>
+                    <div style="color: #4c1d95; font-size: 0.9rem; line-height: 1.6; white-space: pre-wrap;">[AIの視覚認識]
+ヘッダー部分の「WIX | あなたも Wix でサイトを作成してみませんか？」のテキストと背景のコントラストが低く、読みにくい可能性があります。また、ナビゲーションメニューを示す「MENU」ボタンの文字も背景とのコントラストが低いです。
+
+[分析と評価]
+ヘッダーのテキストと「MENU」ボタンのコントラストが低いため、視覚に障害のあるユーザーや高齢者にとっては、これらの情報が認識しにくい可能性があります。これは、WCAG 2.1 AAのコントラスト比の基準を満たしていない可能性があり、アクセシビリティ上の問題となります。
+
+[改善アドバイス]
+ヘッダーのテキストと「MENU」ボタンの背景色を変更するか、文字色をよりコントラストの高い色に変更して、視覚的な認識性を向上させてください。これにより、より多くのユーザーが情報を容易に理解できるようになります。</div>
+                </div>
+                
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            
+            
+            <h3 style="margin-top:50px; border-left: 6px solid #64748b; padding-left: 15px; color: #334155;">🖼️ 画像診断</h3><div class="img-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px;">
+                <div class="img-card" style="background: #fff; border: 1px solid #e2e8f0; padding: 18px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="margin-bottom: 10px;"><a href="#" onclick="return false;" style="color: #003399; font-weight: bold; font-size: 0.9rem;">画像を表示</a></div>
+                    <div style="font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; color: #1e293b;">alt: messageImage_1756556883512.jpg</div>
+                    <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">【判定結果】<br>提示されたalt属性「messageImage_1756556883512.jpg」は、画像の内容を全く示していません。画像はイベントの告知ポスターであるため、その内容を具体的に説明することが重要です。<br><br>【alt改善案】<br>1. 講演会開催のお知らせ<br>2. 9月開催の講演会、オンライン配信の告知ポスター<br>3. 講演会開催のお知らせ：9月1日から30日までオンデマンド配信</div>
+                </div>
+                
+                <div class="img-card" style="background: #fff; border: 1px solid #e2e8f0; padding: 18px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="margin-bottom: 10px;"><a href="#" onclick="return false;" style="color: #003399; font-weight: bold; font-size: 0.9rem;">画像を表示</a></div>
+                    <div style="font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; color: #1e293b;">alt: (alt未設定)</div>
+                    <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">【判定結果】<br>この画像は、背景に淡いグラデーションとテクスチャ、そして白い線で描かれた灯台のシルエットが配置されています。灯台のシルエットは装飾的な要素として機能しており、単体では記事の内容を理解する上で不可欠な情報を提供しているとは考えにくいです。そのため、現状の「(alt未設定)」は、装飾画像としては適切とは言えません。<br><br>【alt改善案】<br>1. alt=""<br>2. alt="灯台のシルエット"<br>3. alt="カラフルな背景に描かれた灯台の線画"</div>
+                </div>
+                
+                <div class="img-card" style="background: #fff; border: 1px solid #e2e8f0; padding: 18px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="margin-bottom: 10px;"><a href="#" onclick="return false;" style="color: #003399; font-weight: bold; font-size: 0.9rem;">画像を表示</a></div>
+                    <div style="font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; color: #1e293b;">alt: slump_bad_man_study.png</div>
+                    <div style="font-size: 0.85rem; color: #475569; line-height: 1.6;">【判定結果】<br>提供されたalt属性「slump_bad_man_study.png」は、画像の内容を直接的に示しているため、ある程度の情報伝達はされています。しかし、画像が表現している感情や状況について、より具体的に伝えることで、視覚に頼らないユーザーにより良い理解を提供できる可能性があります。<br><br>ご参考までに以下の改善案もご覧ください。<br><br>【alt改善案】<br>1. 勉強に悩む男性<br>2. 頭を抱えて勉強に苦戦する男性<br>3. 宿題や試験勉強で追い詰められている様子</div>
+                </div>
+                </div>
+        </div>
+        
+            
+    <div style="margin-top: 50px; padding: 25px; background: #fff7ed; border: 1px solid #ffedd5; border-radius: 12px; color: #9a3412; font-size: 0.85rem; line-height: 1.7;">
+        <div style="font-weight: bold; font-size: 0.95rem; margin-bottom: 12px;">⚠️ AIによる修正案について</div>
+        <ul style="margin: 0; padding-left: 20px;">
+            <li><strong>最終確認のお願い:</strong> AIの提案は完璧ではありません。文脈やサイトの仕様に合わない場合があります。適用前に必ず開発者様ご自身で確認してください。</li>
+            <li><strong>CMSをご利用の場合:</strong> WixやWordPress等の作成ツールをご利用の場合、ソースコードを直接修正するのではなく、管理画面の設定変更（リスト設定の解除や見出しレベルの変更等）が必要な場合があります。</li>
+            <li><strong>デザイン・機能への影響:</strong> 修正によりレイアウト崩れや機能（JS/翻訳ツール等）への影響が出る可能性があります。</li>
+            <li><strong>法的適合の非保証:</strong> 本機能はWCAG/JIS規格への完全な準拠を保証するものではありません。</li>
+            <li><strong>修正案が出ない場合:</strong> 文脈判断が難しい箇所については、安全のため修正案を提示しない場合があります。</li>
+        </ul>
+        <div style="margin-top: 15px;">＊ このレポートが開発の一助になれば幸いです。</div>
+    </div>
+    
+            
+        <div style="margin-top: 60px;">
+            <hr style="border: none; border-top: 1px solid #cbd5e1; margin-bottom: 30px;">
+            <details>
+                <summary style="cursor: pointer; color: #64748b; font-weight: bold; font-size: 0.9rem;">🛠️ 開発者用デバッグ・計測ログ</summary>
+                <div style="background: #1e293b; color: #00ff00; padding: 20px; border-radius: 8px; margin-top: 15px; font-family: &#39;Courier New&#39;, monospace; font-size: 0.8rem; white-space: pre-wrap; overflow-x: auto; line-height: 1.4;">[17:34:16] START: 自作サンプルサイト (limit=1, mobile=True)
+[17:34:16] AI Units Initialized (HTML:gemini-3.1-flash-lite, Image:gemini-2.5-flash-lite)
+[17:34:26] Driver Setup: 10.36s, Found 1 pages
+[17:34:49] Page 1: 22.75s (Axe:4.1s / AI Fix:3.5s / Photo:12.3s / alt:2.8s)
+[17:34:56] Summary Gen: 6.73s
+[17:34:56] EXIT: 40.14s, Cost: -</div>
+            </details>
+        </div>
+        
+            <div style="text-align: center; margin-top: 100px; padding-top: 50px; border-top: 1px solid #e2e8f0;">
+                <div style="font-size: 1.1rem; color: #64748b; margin-bottom: 35px; font-weight: 700;">公開用サンプルのため、元レポートの一時公開URLは非表示にしています。</div>
+                <p style="color:#94a3b8; font-size:0.9rem; margin-bottom: 30px;">A11y-Checker Project v0.99j2</p>
+                <a href="https://checker.bringyouralibis.com/" class="return-btn">🏠 トップページに戻る</a>
+            </div>
+        </div>
+    
+    
+    </body></html>
